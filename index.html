@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>沖繩 4 日小旅行｜11/28–12/1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FFFCF6;--ink:#3E3A39;--coral:#F2A497;--sun:#F6D27A;--sky:#A8D3E6;--leaf:#B9DAA5;--bd:3px solid var(--ink);
+box-sizing:border-box;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Huninn","Noto Sans TC","PingFang TC",sans-serif;line-height:1.7;font-size:16px}
+main{max-width:640px;margin:0 auto;padding:76px 16px 48px}
+section{margin-top:40px}
+h1,h2,h3,p{margin:0}
+h2{font-size:1.4rem;margin-bottom:14px;display:inline-block;background:var(--sun);border:var(--bd);border-radius:999px;padding:2px 18px}
+.card{background:#fff;border:var(--bd);border-radius:24px;padding:16px}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--paper);border-bottom:var(--bd);padding:calc(8px + env(safe-area-inset-top,0px)) 10px 8px;display:flex;gap:8px;justify-content:center}
+nav a{color:var(--ink);text-decoration:none;font-size:.9rem;border:var(--bd);border-radius:999px;padding:2px 12px;background:#fff;white-space:nowrap}
+nav a:nth-child(1){background:var(--coral)}nav a:nth-child(2){background:var(--sky)}nav a:nth-child(3){background:var(--sun)}nav a:nth-child(4){background:var(--leaf)}nav a:nth-child(5){background:var(--coral)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px dashed var(--ink);outline-offset:3px}
+/* hero */
+.hero{background:var(--sky);border:var(--bd);border-radius:36px;overflow:hidden;text-align:center}
+.hero svg{display:block;width:100%;height:150px;overflow:visible}
+#flight{margin-top:22px}
+.hero .txt{background:var(--paper);border-top:var(--bd);padding:10px 12px 12px}
+.hero h1{font-size:1.6rem;line-height:1.4;letter-spacing:.05em}
+.hero p{font-size:.95rem}
+.count{display:inline-flex;gap:6px;align-items:baseline;margin-top:6px;background:var(--sun);border:var(--bd);border-radius:999px;padding:0 18px}
+.count b{font-size:1.5rem;line-height:1.3}
+/* flight */
+.fl{display:grid;gap:14px}
+.fl .card{position:relative}
+.fl .tag{position:absolute;top:-14px;left:16px;border:var(--bd);border-radius:999px;padding:0 14px;background:var(--coral);font-size:.9rem}
+.fl .back .tag{background:var(--leaf)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;text-align:center}
+.row .c{font-size:1.7rem;line-height:1.2}.row small{display:block;font-size:.85rem}
+.row .mid{flex:1;font-size:.8rem;border-top:3px dashed var(--ink);position:relative;padding-top:2px}
+.row .mid::after{content:"";position:absolute;top:-17px;left:50%;transform:translateX(-50%);background:#fff;padding:0 4px;font-size:1.1rem}
+.sub{font-size:.9rem;margin-top:8px}
+/* days */
+.days{display:flex;gap:10px;overflow-x:auto;padding:4px 4px 12px;scrollbar-width:none}
+.days button{flex:1 0 74px;font:inherit;color:var(--ink);background:#fff;border:var(--bd);border-radius:20px;padding:6px 4px;cursor:pointer;line-height:1.3}
+.days button b{display:block;font-size:1.15rem}.days button small{font-size:.75rem}
+.days button[aria-selected=true]{background:var(--coral);transform:translateY(-3px);box-shadow:0 4px 0 var(--ink)}
+.dtitle{margin:4px 0 14px;font-size:1.05rem}
+.pop{animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{0%{transform:scale(.92) translateY(14px);opacity:0}100%{transform:none;opacity:1}}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px dashed var(--ink);margin-left:8px}
+.tl li{position:relative;margin-bottom:16px}
+.tl li::before{content:"";position:absolute;left:-34px;top:12px;width:18px;height:18px;border:var(--bd);border-radius:50%;background:var(--sun)}
+.tl li.must::before{background:var(--coral)}
+.time{font-size:.85rem;display:inline-block;background:var(--paper);border:3px solid var(--ink);border-radius:999px;padding:0 10px;margin-bottom:4px}
+.it{background:#fff;border:var(--bd);border-radius:22px;padding:10px 14px}
+.it h3{font-size:1.08rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.must-b{background:var(--coral);border:3px solid var(--ink);border-radius:999px;font-size:.75rem;padding:0 8px;line-height:1.6}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.t{border:3px solid var(--ink);border-radius:999px;font-size:.78rem;padding:0 10px;line-height:1.6}
+.t.rail{background:var(--sky)}.t.bus{background:var(--leaf)}.t.taxi{background:var(--sun)}.t.walk{background:#fff}.t.fly{background:var(--coral)}
+.meta{font-size:.85rem;margin-top:6px}.meta div{margin-top:2px}
+.meta a{color:var(--ink);text-decoration:none;margin-right:10px;display:inline-block}
+/* todo */
+.todo{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.todo label{display:flex;gap:12px;align-items:center;background:#fff;border:var(--bd);border-radius:20px;padding:8px 14px;cursor:pointer}
+.todo input{appearance:none;flex:0 0 26px;width:26px;height:26px;border:var(--bd);border-radius:9px;background:#fff;margin:0;cursor:pointer;display:grid;place-items:center}
+.todo input:checked{background:var(--leaf)}
+.todo input:checked::after{content:"✓";font-size:1.1rem;line-height:1}
+.todo input:checked+span{text-decoration:line-through;opacity:.55}
+.prog{margin:0 0 12px;font-size:.9rem}
+/* stay */
+.stay{background:var(--leaf)}
+.stay h3{font-size:1.2rem}
+.stay dl{margin:10px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.92rem}
+.stay dt{background:#fff;border:3px solid var(--ink);border-radius:999px;padding:0 10px;font-size:.8rem;align-self:start}
+.stay dd{margin:0}
+footer{text-align:center;font-size:.85rem;margin-top:40px}
+/* svg anim */
+.cloud{animation:drift 9s ease-in-out infinite alternate}.cloud.b{animation-duration:12s;animation-delay:-4s}
+.plane{animation:fly 6s ease-in-out infinite alternate}
+.wave{animation:bob 3s ease-in-out infinite alternate}.wave.b{animation-delay:-1.5s}
+.sun{transform-origin:290px 52px;animation:spin 20s linear infinite}
+.train{animation:ride 7s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translateX(22px)}}
+@keyframes fly{to{transform:translate(18px,-10px) rotate(-4deg)}}
+@keyframes bob{to{transform:translateY(5px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ride{to{transform:translateX(30px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="主選單"><a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#todo">待辦</a><a href="#stay">住宿</a></nav>
+<main id="top">
+<header class="hero">
+<svg viewBox="0 0 360 230" role="img" aria-label="沖繩插圖：首里城、單軌電車、飛機與海">
+<rect x="-300" y="-60" width="960" height="300" fill="#A8D3E6"/>
+<g class="sun"><circle cx="290" cy="52" r="24" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/><path d="M290 16v8M290 80v8M254 52h8M318 52h8M264 26l6 6M310 72l6 6M316 26l-6 6M270 72l-6 6" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/></g>
+<g class="cloud"><path d="M30 70q0-18 18-18 8-12 24-6 14-4 18 14 14 2 12 14H34q-6-2-4-4z" fill="#fff" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="cloud b"><path d="M200 112q0-12 12-12 6-8 17-4 10-2 13 10 10 2 8 10h-48q-4-1-2-4z" fill="#fff" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></g>
+<g class="plane"><path d="M120 40l56 8 20-12 10 4-12 14 14 6-6 6-22-2-30 18-8-2 14-20-34-6z" fill="#fff" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/><circle cx="186" cy="50" r="3" fill="#F2A497"/></g>
+<!-- sea -->
+<path d="M-300 150h300q90-16 180 0t180 0h300v80H-300z" fill="#8CC4DC" stroke="#3E3A39" stroke-width="3"/>
+<path class="wave" d="M20 190q12-8 24 0t24 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path class="wave b" d="M250 176q12-8 24 0t24 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<!-- island + castle -->
+<path d="M60 160q50-34 120-34t120 34z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<rect x="118" y="108" width="124" height="22" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+<path d="M104 110l76-30 76 30z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<rect x="154" y="84" width="52" height="16" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+<path d="M146 86l34-22 34 22z" fill="#F6D27A" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<path d="M170 130v-12h20v12z" fill="#FFFCF6" stroke="#3E3A39" stroke-width="3"/>
+<!-- palm -->
+<path d="M40 160q4-30 0-46" fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+<path d="M40 114q-20-8-28 6M40 114q-8-18-26-14M40 114q18-14 30-2M40 114q14 4 20 16" fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+<!-- monorail -->
+<rect x="-300" y="206" width="960" height="8" fill="#fff" stroke="#3E3A39" stroke-width="3"/>
+<g class="train"><rect x="40" y="184" width="96" height="22" rx="10" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/><rect x="50" y="189" width="16" height="9" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/><rect x="72" y="189" width="16" height="9" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/><rect x="94" y="189" width="16" height="9" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/><rect x="116" y="189" width="12" height="9" rx="3" fill="#FFFCF6" stroke="#3E3A39" stroke-width="2.5"/></g>
+</svg>
+<div class="txt">
+<h1>沖繩 4 日小旅行</h1>
+<p>11/28（六）– 12/1（二）・那霸 × 玉泉洞 × 首里城</p>
+<div class="count" aria-live="polite"><span id="cdLabel">距離出發還有</span><b id="cd">–</b><span id="cdUnit">天</span></div>
+</div>
+</header>
+
+<section id="flight">
+<h2>航班</h2>
+<div class="fl">
+<div class="card"><span class="tag">去程 11/28（六）</span>
+<div class="row"><div><span class="c">台中</span><small>09:45</small></div><div class="mid">中華航空</div><div><span class="c">那霸</span><small>12:15</small></div></div>
+<p class="sub">07:45 前抵達台中機場第二航廈</p></div>
+<div class="card back"><span class="tag">回程 12/1（二）</span>
+<div class="row"><div><span class="c">那霸</span><small>13:15</small></div><div class="mid">中華航空</div><div><span class="c">台中</span><small>14:00</small></div></div>
+<p class="sub">11:00 前抵達沖繩國際機場</p></div>
+</div>
+</section>
+
+<section id="plan">
+<h2>每日行程</h2>
+<div class="days" role="tablist" aria-label="選擇日期" id="tabs"></div>
+<div id="panel" role="tabpanel"></div>
+</section>
+
+<section id="todo">
+<h2>出發前待辦</h2>
+<p class="prog" id="prog"></p>
+<ul class="todo" id="todoList"></ul>
+</section>
+
+<section id="stay">
+<h2>住宿資訊</h2>
+<div class="card stay">
+<h3>那霸歌町大和Roynet飯店PREMIER</h3>
+<dl>
+<dt>入住</dt><dd>11/28（六），12:30–14:00 抵達辦理</dd>
+<dt>退房</dt><dd>12/1（二）早上，前往那霸空港</dd>
+<dt>交通</dt><dd>單軌歌町站，到那霸空港約 20 分鐘＋步行 10 分鐘（¥320／人）</dd>
+<dt>周邊</dt><dd>往返國際通、首里、美國村皆可搭單軌或計程車</dd>
+</dl>
+</div>
+</section>
+<footer>おきなわ たのしんで ね ☺</footer>
+</main>
+
+<script>
+var DAYS=[
+{d:"11/28",w:"六",title:"抵達那霸・初探國際通",items:[
+{t:"07:20",n:"台中機場第二航廈集合",tr:[["fly","出發"]]},
+{t:"09:45–12:15",n:"抵達沖繩國際機場",tr:[["fly","中華航空"]],eat:"mille mele"},
+{t:"12:30–14:00",n:"出關／歌町大和酒店 check in",tr:[["rail","單軌 20 分"],["walk","走路 10 分"]],note:"那霸空港 → 歌町",fare:"¥320／人"},
+{t:"15:00–17:30",n:"波上宮",must:1,tr:[["bus","公車 3 路 16 分"],["walk","走路 10 分"]],note:"歌町一丁目 → 西武門",fare:"¥280／人"},
+{t:"17:30–20:00",n:"國際通／牧志市場／晚餐",must:1,tr:[["taxi","計程車 10 分"],["walk","走路"]],eat:"元村炸牛排",taxi:"¥700"},
+{t:"20:00–20:30",n:"回歌町大和酒店",tr:[["rail","單軌 10 分"]],note:"牧志 → 歌町",fare:"¥250／人"}]},
+{d:"11/29",w:"日",title:"洞窟探險・瀨長島日落",items:[
+{t:"08:00–09:00",n:"早餐"},
+{t:"09:00–12:00",n:"gangala 之谷（10:00 導覽）／玉泉洞",must:1,tr:[["taxi","計程車 40 分"]],fare:"預約導覽 ¥2,500／人；玉泉洞門票 ¥1,000／人",taxi:"¥4,000"},
+{t:"12:00–13:00",n:"午餐",eat:"蕎蕎蕎（蕎麥麵）"},
+{t:"14:00–16:00",n:"瀨長島",must:1,tr:[["taxi","計程車 30 分"]],taxi:"¥4,000"},
+{t:"16:00–19:00",n:"DFS／main place 購物",tr:[["bus","公車 TK04／TK02 15 分"],["rail","單軌 17 分"]],note:"赤嶺 → 歌町",eat:"黑船／和風亭（鰻魚飯）"}]},
+{d:"11/30",w:"一",title:"首里城・寶可夢・美國村",items:[
+{t:"08:00–09:00",n:"早餐"},
+{t:"09:00–11:00",n:"首里城",must:1,tr:[["rail","單軌 10 分"],["walk","走路 10 分"]],note:"歌町 → 首里",fare:"車資 ¥250／人；門票 ¥1,000／人"},
+{t:"12:00–14:00",n:"午餐",tr:[["rail","單軌 10 分"],["walk","走路 10 分"]],note:"首里 → 古島",fare:"¥250／人",eat:"燒肉五苑(已訂位)"},
+{t:"15:00–17:00",n:"永旺來客夢（寶可夢中心）",must:1,tr:[["taxi","計程車 30 分"]],taxi:"¥4,000"},
+{t:"17:30–19:00",n:"美國村",must:1,tr:[["taxi","計程車 20 分"]],taxi:"¥3,000"},
+{t:"19:00–20:00",n:"回歌町大和酒店",tr:[["bus","公車 228 路 50 分"],["taxi","計程車 30 分"]],taxi:"¥4,000"}]},
+{d:"12/1",w:"二",title:"回家囉",items:[
+{t:"09:00–10:00",n:"早餐"},
+{t:"10:30–11:00",n:"沖繩國際機場",tr:[["rail","單軌 20 分"],["walk","走路 10 分"]],note:"歌町 → 那霸空港",fare:"¥320／人"},
+{t:"13:15–14:00",n:"抵達台中機場",tr:[["fly","中華航空"]]}]}
+];
+var TODO=["確認護照效期（6 個月以上）","填寫 Visit Japan Web","預約 gangala 之谷導覽（11/29 10:00）","準備日幣現金與交通 IC 卡","購買 eSIM／網路分享器","預訂首里城、玉泉洞門票"];
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function eatLinks(s){return s.split("／").map(function(p){var q=p.replace(/（.*?）/g,"").trim()+" 沖繩 那霸";return '<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener noreferrer">📍 '+esc(p)+'</a>'}).join("")}
+function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+
+/* countdown */
+(function(){
+var go=new Date("2026-11-28T07:20:00+08:00"),end=new Date("2026-12-01T14:00:00+08:00"),now=new Date();
+if(now>end){$("cdLabel").textContent="旅程已結束";$("cd").textContent="♡";$("cdUnit").textContent=""}
+else if(now>=go){$("cdLabel").textContent="旅程進行中";$("cd").textContent="GO";$("cdUnit").textContent=""}
+else{var h=Math.ceil((go-now)/36e5);
+if(h<24){$("cd").textContent=h;$("cdUnit").textContent="小時"}else{$("cd").textContent=Math.floor((go-now)/864e5);$("cdUnit").textContent="天"}}
+})();
+
+/* days */
+var cur=0;
+function renderTabs(){
+$("tabs").innerHTML=DAYS.map(function(d,i){return'<button role="tab" id="tab'+i+'" aria-selected="'+(i===cur)+'" data-i="'+i+'"><b>'+d.d+'</b><small>第 '+(i+1)+' 天・'+d.w+'</small></button>'}).join("")}
+function renderDay(anim){
+var d=DAYS[cur];
+var h='<p class="dtitle">'+esc(d.title)+'</p><ol class="tl">'+d.items.map(function(x){
+var s='<li'+(x.must?' class="must"':'')+'><span class="time">'+x.t+'</span><div class="it"><h3>'+esc(x.n)+'</h3>';
+if(x.tr)s+='<div class="tags">'+x.tr.map(function(t){return'<span class="t '+t[0]+'">'+esc(t[1])+'</span>'}).join("")+'</div>';
+var m="";
+if(x.note)m+='<div>站名：'+esc(x.note)+'</div>';
+if(x.fare)m+='<div>票價：'+esc(x.fare)+'</div>';
+if(x.taxi)m+='<div>計程車約 '+x.taxi+'</div>';
+if(x.eat)m+='<div>用餐：'+eatLinks(x.eat)+'</div>';
+if(m)s+='<div class="meta">'+m+'</div>';
+return s+'</div></li>'}).join("")+'</ol>';
+var p=$("panel");p.setAttribute("aria-labelledby","tab"+cur);p.innerHTML=h;
+if(anim){p.classList.remove("pop");void p.offsetWidth;p.classList.add("pop")}}
+$("tabs").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cur=+b.dataset.i;renderTabs();renderDay(true);$("tab"+cur).focus()});
+$("tabs").addEventListener("keydown",function(e){var n=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!n)return;cur=(cur+n+DAYS.length)%DAYS.length;renderTabs();renderDay(true);$("tab"+cur).focus()});
+/* open today's tab during the trip */
+(function(){var n=new Date(),k=(n.getMonth()+1)+"/"+n.getDate();DAYS.forEach(function(d,i){if(d.d.replace(/^0/,"")===k)cur=i})})();
+renderTabs();renderDay(false);
+
+/* todo */
+var done={};try{done=JSON.parse(load("okTodo")||"{}")||{}}catch(e){done={}}
+function prog(){var c=TODO.filter(function(_,i){return done[i]}).length;$("prog").textContent="已完成 "+c+" / "+TODO.length+(c===TODO.length?" 全部搞定！":"")}
+$("todoList").innerHTML=TODO.map(function(t,i){return'<li><label><input type="checkbox" data-i="'+i+'"'+(done[i]?" checked":"")+'><span>'+esc(t)+'</span></label></li>'}).join("");
+$("todoList").addEventListener("change",function(e){var i=e.target.dataset.i;if(i==null)return;done[i]=e.target.checked;save("okTodo",JSON.stringify(done));prog()});
+prog();
+</script>
+</body>
+</html>
